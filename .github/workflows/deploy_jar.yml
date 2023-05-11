@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.USERNAME }} # 远程服务器用户名，从 secrets 中读取
           port: ${{ secrets.PORT }} # 远程服务器端口号，从 secrets 中读取
           key: ${{ secrets.KEY }} # SSH 密钥，从 secrets 中读取
-          source: "target/dousheng.jar" # 要拷贝的文件路径
+          source: "target/test_deploy_jar.jar" # 要拷贝的文件路径
           rm: true # 是否删除目标文件，如果为 true，表示先删除目标文件，再拷贝新文件
           target: "/www/test" # 目标文件路径
       - name: Deploy
@@ -38,7 +38,7 @@ jobs:
           command_timeout: 20s # shell 命令执行超时时间，20s
           script: |
             cd /www/test/target
-            ps -ef | grep dousheng.jar | grep -v grep | awk '{print $2}' | xargs kill -9 
-            nohup java -jar dousheng.jar --spring.profiles.active=pro > nohup.out &
+            ps -ef | grep test_deploy_jar.jar | grep -v grep | awk '{print $2}' | xargs kill -9 
+            nohup java -jar test_deploy_jar.jar --spring.profiles.active=pro > nohup.out &
             pwd
             exit
