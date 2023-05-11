@@ -12,6 +12,11 @@ public class TestController {
         return Result.success("teset1");
     }
 
+    @GetMapping("/test2")
+    public Result test2() {
+        return Result.success("teset2");
+    }
+
 
 
 }
