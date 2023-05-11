@@ -39,6 +39,5 @@ jobs:
           script: |
             cd /www/test/target
             ps -ef | grep test_deploy_jar.jar | grep -v grep | awk '{print $2}' | xargs kill -9 
-            nohup java -jar test_deploy_jar.jar --spring.profiles.active=pro > nohup.out &
-            pwd
+            nohup java -jar test_deploy_jar.jar --spring.profiles.active=prod > nohup.out &
             exit

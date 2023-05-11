@@ -54,7 +54,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>test_jar</finalName>
+        <finalName>test_deploy_jar</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
