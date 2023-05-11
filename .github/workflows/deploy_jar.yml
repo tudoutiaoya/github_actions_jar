@@ -16,8 +16,6 @@ jobs:
           java-version: 8 # 指定 Java 版本
           distribution: "adopt" # 指定使用 AdoptOpenJDK 发行版
           cache: maven # 缓存 Maven 依赖项
-
-      - name: Build with Maven # 定义一个步骤名称
       - run: mvn clean -DfinalName=dousheng package --file pom.xml
 
       - name: Copy Jar to Server # 定义一个步骤名称
