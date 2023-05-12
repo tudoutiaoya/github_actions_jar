@@ -72,7 +72,6 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.zzqedu.GithubActionsJarApplication</mainClass>
-                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
