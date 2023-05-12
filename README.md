@@ -7,4 +7,4 @@ Github Actions 部署Jar包模版
 - 修改构建Jar包的名称
 - Github 添加secrets(可以看文章教程)
 
-教程：(文章教程)[https://juejin.cn/post/7231920813217316901]
+教程：[文章教程](https://juejin.cn/post/7231920813217316901)
