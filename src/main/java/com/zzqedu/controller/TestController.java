@@ -17,6 +17,12 @@ public class TestController {
         return Result.success("teset2");
     }
 
+    @GetMapping("/test3")
+    public Result test3() {
+        return Result.success("teset3");
+    }
+
+
 
 
 }
